@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Mapper接口-->
+<mapper namespace="com.chj.mapper.UserMapper">
+    <resultMap id="UserMap" type="com.chj.pojo.User">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+
+    <select id="getUserList" resultMap="UserMap">
+        select * from user
+    </select>
+
+</mapper>
